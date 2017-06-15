@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kokomo Summer Festival</title>
+   <link rel='stylesheet' media="screen and (max-width:2880px)" href='CSS/2880resHome.css'>
+    <link href="CSS/Logo.css" rel="stylesheet" type="text/css">
+      <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="Images/PalmtreeLogo.png">
+    <link rel='stylesheet' media="screen and (max-width:1280px)" href='CSS/1280resHome.css'>
+</head>
+
+<body>
+    
+    
+    
+  <?php  
+  session_start();
+    if($_SESSION['email']!=null)
+    { 
+        $first = $_SESSION['Firstname'];
+      echo"<h1 class='name' > Welcome $first</h1>"
+    
+      ;
+    }
+    ?>
+   <?php
+    if($_SESSION['email']!=null)
+    { 
+			$username = $_SESSION['email'];
+			$conn = new PDO('mysql:host=localhost;dbname=dbi336041','dbi336041','Guerrero');
+			$query = $conn->query("SELECT Balance FROM customer WHERE Email = '$username'")->fetch();
+			 
+    echo "<h1 class='balanceI' > Balance €$query[0]</h1>";
+    }
+		 
+    ?> 
+  <!--  <img src="Images/HeaderBg.png" id="headerimg">-->
+    <div id="Signing">
+        <form method="post" action="php/login.php">
+            <label>E-mail: <input id="email" type="email" name="email"></label>
+            <label>Password: <input id="password" type="password" name="password"></label>
+           <input id="LoginB" type="image" src="Images/coconutlogin2.png" value="Login" name="submit">
+        </form>
+    </div>
+   <div id="picturesI">
+      <a href="index.php"><img id="homeP" src="Images/wood/Wood%20-%20Light%20Pink1.png"></a>
+       <a href="Artists.php"><img id="artistP" src="Images/wood/Wood%20-%20Green1.png"></a>
+       <a href="events.php"><img id="eventsP" src="Images/wood/Wood%20-%20Light%20Blue1.png"></a>
+       <a href="Contact.php"><img id="contactsP" src="Images/wood/Wood%20-%20Blue1.png"></a>
+       <a href="About.php"><img id="aboutP" src="Images/wood/Wood%20-%20Dark%20Yellow1.png"></a>
+
+       <?php
+    session_start();
+     if($_SESSION['email'] != null){
+      echo'<a href="tent.php"><img id="campsiteP" src="Images/wood/Wood%20-%20Light%20Purple1.png"></a>
+<a href="Loginpage.php"><img id="accountP" src="Images/wood/Wood%20-%20Orange2.png"></a>
+<form method="post" action="php/logout.php">
+   <input id="logoutS" type="image" src="Images/wood/Wood%20-%20Pink1.png" name="submit" value="sign out">
+    </form>
+    <script>document.getElementById("Signing").setAttribute("hidden","hidden");document.getElementById("picturesI").setAttribute("id","picturesI2");</script>';
+    }
+
+    ?>
+
+    </div>
+    
+    
+    
+    
+    
+  <!--  <img src="Images/HeaderBg.png" id="headerimg">-->
+    <div id="tentimg">
+    <img src="Images/Posters/Molecaten%20map.jpg">
+    
+    </div>
+<div id="tentR">
+<form  method="post" action="">
+   <select id = "combobox" name="selectCamp">
+<!--
+       <option value="1">tent #1</option>
+    <option value="2">tent #2</option>
+       <option value="3">tent #3</option>
+       <option value="4">tent #4</option>
+       <option value="5">tent #5</option>
+       <option value="6">tent #6</option>
+       <option value="7">tent #7</option>
+       <option value="8">tent #8</option>
+       <option value="9">tent #9</option>
+       <option value="10">tent #10</option>
+-->
+    
+     <option value="NULL">Select...</option>
+
+							<?php
+							$conn = mysqli_connect('localhost', 'dbi336041', 'Guerrero', 'dbi336041');
+							if (!$conn) {
+							    die("Connection failed: " . mysqli_connect_error());
+							}
+							$sql = "SELECT * FROM tent_all WHERE Occupied = 0;";
+							$result = mysqli_query($conn, $sql);
+							if (mysqli_num_rows($result) > 0) {
+							    while($row = mysqli_fetch_assoc($result)) {
+							      $camp_num = $row["TentNr"];
+										echo '<option value="' . $camp_num . '">' . $camp_num . '</option>';
+							    }
+							} else {
+							    echo "No empty camps, sorry!";
+							}
+							mysqli_close($conn);
+							?>
+    </select>
+    <input type="submit" name="invite">
+    
+    </form>
+    </div>
+<?php
+session_start();
+try{
+$conn = new PDO('mysql:host=localhost;dbname=dbi336041','dbi336041','Guerrero');
+
+    if(isset($_POST['invite'])){
+       $camp_select =$_POST['selectCamp'];
+
+  $camp_id = "NULL";
+  if ($camp_select != "NULL")
+  {
+    $camp_id = $camp_select;
+   
+    $query = "UPDATE tent_all
+              SET Occupied = 1
+              WHERE TentNr = $camp_id;";
+    $result = mysql_query($query);
+
+           $query1 = $conn->prepare("UPDATE tent_all
+              SET Occupied = 1
+              WHERE TentNr = :campid;");
+        $query1->execute(array(':campid' => $camp_id));
+        $something = $query1->fetch();
+   
+      $query2 = $conn->prepare("INSERT INTO tent(TentNr,Email) VALUES(:campid,:email)");
+        $query2->execute(array(':campid' => $camp_id , ':email' => $_SESSION['email']));
+        $something2 = $query2->fetch();
+      
+    $_SESSION['TentNr'] = $camp_id;
+ 
+  }
+         }
+       
+       
+$conn=null;
+}
+catch(PDOException $e) {
+echo $e->getMessage();
+    
+}
+
+?>
+
+   <?php  
+    session_start();
+    if($_SESSION['email'] != null){
+      echo'    <div id="Ktweet" hidden="hidden">
+<a class="twitter-timeline" data-width="300" data-height="700" href="https://twitter.com/Kokomo_Festival">Tweets by Kokomo_Festival</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div id="postTweet">
+    <a href="https://twitter.com/intent/tweet?screen_name=Kokomo_Festival" class="twitter-mention-button">Tweet to @Kokomo_Festival</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\'://platform.twitter.com/widgets.js\';fjs.parentNode.insertBefore(js,fjs);}}(document, \'script\', \'twitter-wjs\');</script>
+    </div>
+</div>
+
+
+<img id="Twitter" src="Images/Twitter.png">';
+    }
+?>
+        <script src="Script/Java3.js"></script>
+
+
+</body>
+</html>

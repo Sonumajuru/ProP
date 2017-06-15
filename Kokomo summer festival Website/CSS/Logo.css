@@ -1,0 +1,702 @@
+body{
+    background-image: url(../Images/Background5.jpg);
+    background-repeat: no-repeat;
+}
+img#headerimg{
+    position: relative;
+    right: 0.4%;
+    bottom: 8.6px;
+}
+div#Signing{
+    width:248px;
+    height: 150px;
+    margin-top: 20px;
+    position: relative;
+    left: 1520px;
+}
+label{
+       font-family: 'Matura MT Script Capitals';
+    color: #4d3c2c;
+    float: right;
+}
+
+
+#email{
+    font-family: 'Matura MT Script Capitals';
+    color: #4d3c2c;
+    border-radius: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-color: aquamarine;
+    outline: none;
+}
+#password{
+    font-family: 'Matura MT Script Capitals';
+    color: #4d3c2c;
+    border-radius: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-color: aquamarine;
+    margin-top: 5px;  
+    outline-style: none;
+}
+#firstR{
+
+    height: 10px;
+    padding: 4px 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#lastR{
+    height: 10px;
+    padding: 4px 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;  
+}
+#emailR{
+      height: 10px;
+    padding: 4px 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#passR{
+      height: 10px;
+    padding: 4px 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#phoneR{
+      height: 10px;
+    padding: 4px 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#cancels{
+    margin-top: 15px;
+}
+input#LoginB{
+    width: 49px;
+  position: relative;
+    left: 60%;
+    top: 40px;
+    opacity: 0.8;
+}
+input#LoginB:focus {
+    outline:0;
+}
+div#maincontent{
+    background-color: white;
+    width: 800px;
+    height: 480px;
+      position: relative;
+    top: 230px;
+    margin: auto;
+    border-radius: 20px;
+    opacity: 0.2;
+    
+}
+div#Text{
+    width: 400px;
+    position: absolute;
+    top: 300px;
+    left: 1300px;
+}
+div#TextC{
+    width: 600px;
+    position: absolute;
+    top: 630px;
+    left: 700px;
+}
+div#TextAbout{
+    width: 1000px;
+    position: absolute;
+    top: 400px;
+    left: 500px;
+}
+span.spanstyle h1{
+    font-family: 'Matura MT Script Capitals';
+    color: #4d3c2c;
+    width: 480px;
+    margin: auto;
+
+    
+}
+span.spanstyle{
+    font-family: 'Matura MT Script Capitals';
+    color: #4d3c2c;
+    font-size: 36px;
+    position: relative;
+    bottom: 50px;
+    
+    
+}
+span.spanstyleAbout{
+    font-family: 'Matura MT Script Capitals';
+    color: #4d3c2c;
+    font-size: 27px;
+    position: relative;
+    bottom: 50px;
+    
+    
+}
+.icons{
+    width: 45px;
+    height: 45px;
+}
+
+img#Twitter{
+    cursor: pointer;
+    width: 31px;
+    position: fixed;
+    left: 98.397%;
+    top: 400px;
+    opacity: 0.6;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+
+img#TwitterB{
+    cursor: pointer;
+    width: 31px;
+    position: fixed;
+    left: 82.755%;
+    top: 400px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+img#Twitter:hover{
+    opacity: 1;
+    
+}
+
+#cost{
+   float: left;
+    position: relative;
+    top: 50px;
+    right: 30px;
+    width: 300px;
+    
+}
+#costf{
+    font-size: 30px;
+    
+}
+ .animate
+        {
+            transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+        }
+
+        .action-button
+        {
+            position: relative;
+            padding: 10px 40px;
+            margin: 0px 10px 10px 0px;
+            float: left;
+            border-radius: 10px;
+            font-family: 'Pacifico', cursive;
+            font-size: 25px;
+            color: #FFF;
+            text-decoration: none;	
+        }
+        
+        
+        .action-button:active
+        {
+            transform: translate(0px,5px);
+          -webkit-transform: translate(0px,5px);
+            border-bottom: 1px solid;
+        }
+        
+        .color{      
+        
+            background-image:url(../Images/12833201_522967417883539_391416412_n.jpg);
+            background-size: 300px 80px;
+            border-bottom: 5px solid #543220;
+            text-shadow: 0px -2px #543220;
+        }
+        
+        .buy{
+            position:absolute;
+            width:300px;
+            height:80px;
+            left:900px;
+            bottom: 95px;
+            margin-left:-50px;
+            margin-top:-50px;
+            outline: none!important;
+        }
+        
+        .info{
+            position:absolute;
+            width:300px;
+            height:80px;
+            left:35%;
+            top:60%;
+            margin-left:-50px;
+            margin-top:-50px;
+        }
+form#register{
+    position: fixed;
+    left: 38%;
+    bottom: 500px;
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+}
+form#register fieldset{
+    width: 450px;
+    height: 350px;
+    border-radius: 10px;
+    position: relative;
+    top: 12px;
+    left: 9px;
+}
+form#register fieldset input{
+  display: block;
+}
+div.container{
+    position: fixed;
+    top: 40%;
+    left: 33%;
+    width: 700px;
+    background-color: white;
+    border-radius: 20px;
+}
+div.container label{
+    font-family: 'Pacifico', cursive;
+}
+ul#accountinfo{
+    position: fixed;
+    top: 50%;
+}
+
+#ArtistContent{
+    position: relative;
+    top: 200px;
+    left: 500px;
+    width: 1100px;
+    height: 1200px;
+}
+img.artists{
+    width: 300px;
+    height: 300px;
+}
+
+#Afro,#Kygo,#Weesz,#Jeff,#Mari,#Alex,#Jack{
+    width: 500px;
+    height: 400px;
+}
+#Afro{
+     -ms-transform: rotate(-7deg); 
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+#Kygo{
+    position: relative;
+    bottom: 400px;
+    left: 500px;
+}
+
+#Weesz{
+       position: relative;
+    bottom: 400px;
+    left: 230px;
+     -ms-transform: rotate(7deg); 
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+}
+#Jeff{
+       position: relative;
+    bottom: 400px;
+    -ms-transform: rotate(3deg); 
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+#Mari{
+       position: relative;
+    bottom: 1200px;
+    left: 700px;
+     -ms-transform: rotate(2deg); 
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+
+#Alex{
+       position: relative;
+   bottom: 1200px;
+    left: 400px;
+  -ms-transform: rotate(-1deg); 
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+}
+
+#Jack{
+       position: relative;
+   bottom: 1600px;
+    left: 800px;
+     -ms-transform: rotate(-3deg); 
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+#AfroIc{
+    position: relative;
+    top: 20px;
+    left: 25px;
+}
+#KygoIc{
+    position: relative;
+    top: 20px;
+    left: 25px;
+}
+
+#WeeszIc{
+     position: relative;
+    top: 20px;
+    left: 25px;
+}
+#JeffIc{
+     position: relative;
+    top: 20px;
+    left: 25px;
+}
+
+#MariIc{
+     position: relative;
+    top: 20px;
+    left: 25px;
+}
+
+#AlexIc{
+     position: relative;
+    top: 20px;
+    left: 25px;
+}
+
+#JackIc{
+     position: relative;
+    top: 20px;
+    left: 25px;
+}
+
+#rock{
+    position: relative;
+    left: 600px;
+    bottom: 500px;
+    width: 80px;
+}
+#rock1{
+    position: relative;
+    left: 700px;
+    bottom: 900px;
+    width: 50px;
+}
+#rock2{
+    position: relative;
+    left: 900px;
+    bottom: 400px;
+    width: 40px;
+}
+#rock3{
+    position: relative;
+    left: 560px;
+    bottom: 150px;
+    width: 85px;
+}
+#rock4{
+    position: relative;
+    left: 1100px;
+    bottom: 850px;
+    width: 40px;
+}
+#seashell{
+   position: relative;
+    left: 800px;
+    bottom: 800px;
+    width: 70px; 
+}
+#seashell1{
+   position: relative;
+    left: 670px;
+    bottom: 430px;
+    width: 60px; 
+}
+#seashell2{
+   position: relative;
+    left: 1190px;
+    bottom: 510px;
+    width: 90px; 
+}
+#seashell3{
+   position: relative;
+    left: 700px;
+    bottom: 200px;
+    width: 30px; 
+}
+#seashell4{
+   position: relative;
+    left: 1190px;
+    bottom: 250px;
+    width: 43px; 
+}
+
+#logoutS{
+width: 250px;
+    position: relative;
+    top: 890px;
+}
+#logoutS:focus{
+outline: 0px;
+}
+
+#campsiteP{
+  width: 250px;  
+        position: relative;
+    top: 890px;
+}
+
+#accountP{
+   width: 250px;
+        position: absolute;
+    top: 780px;
+    left:10px;
+}
+
+#artistP{
+   width: 250px; 
+        position: absolute;
+    top: 495px;
+    left:10px;
+}
+
+#eventsP{
+    width: 250px;
+        position: absolute;
+    top: 390px;
+    left:10px;
+}
+
+#contactsP{
+    width: 250px; 
+        position: absolute;
+    top: 600px;
+    left:10px;
+}
+
+#aboutP{
+    width: 250px; 
+        position: absolute;
+    top: 675px;
+    left:10px;
+}
+#homeP{
+      width: 250px; 
+        position: absolute;
+    top: 300px;
+    left:10px;
+}
+#pictures{
+    position: relative;
+    top: 20px;
+}
+#picturesI{
+    position: relative;
+    bottom: 120px;
+}
+#picturesI2{
+    position: relative;
+    top: 12px;
+    right: 8px;
+}
+
+#poster{
+    width: 600px;
+  position: relative;
+    top: 100px;
+    left: 600px;
+}
+#buy{
+    position: absolute;
+    top: 910px;
+    left: 1400px;
+}
+article.event
+{
+    width: 500px;
+    
+    font-family: 'Pacifico', cursive;
+    color: #4d3c2c;
+    font-size: 150%;
+}
+#eventPart1{
+    position: absolute;
+  top: 300px;
+    left: 430px;
+}
+#eventPart2{
+    position: absolute;
+    top: 300px;
+    left: 1150px;
+}
+article.eventi
+{
+  
+    font-family: 'Pacifico', cursive;
+    color: #4d3c2c;
+    font-size: 200%;
+}
+article.eventC
+{
+  
+    font-family: 'Pacifico', cursive;
+    color: #4d3c2c;
+    font-size: 200%;
+}
+h2.event
+{
+    font-size: 240%;
+}
+p.event
+{
+    position: relative;
+    left: 3%;
+    font-style: oblique;
+}
+span.event
+{
+    position: relative;
+    left: 3%;
+    font-style: oblique;
+}
+#LivePosition{
+    position: relative;
+    right: 60px;
+}
+.name{
+     position: absolute;
+    top: 10px;
+    right: 100px;
+    font-size: 40px;
+ font-family: 'Pacifico', cursive;
+}
+
+#Ktweet{
+    position: fixed;
+    left: 84.397%;
+    top: 250px;
+  
+}
+
+.twitter-timeline{
+       border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#postTweet{
+    position: fixed;
+    left: 85%;
+    bottom: 40px;
+}
+
+.nameAccount{
+     position: absolute;
+    top: 30px;
+    right: 100px;
+    font-size: 40px;
+     font-family: 'Pacifico', cursive;
+}
+#CountDown{
+    position: absolute;
+    top: 400px;
+    left: 750px;
+}
+
+#tentR{
+  position: absolute;
+    top: 760px;
+    left: 800px;
+    
+}
+#tentimg{
+    position: relative;
+    left: 650px;
+    top: 200px;
+    
+}
+.balanceI{
+        position: absolute;
+    top: 160px;
+    right: 100px;
+    font-size: 35px;
+ font-family: 'Pacifico', cursive; 
+}
+.balance{
+        position: absolute;
+    top: 160px;
+    right: 100px;
+    font-size: 35px;
+ font-family: 'Pacifico', cursive; 
+}
+#aloha {
+    position: absolute;
+    top: 1100px;
+    left: 400px;
+}
+
+#delice {
+      position: absolute;
+    top: 1100px;
+    left: 800px;
+}
+
+#splash {
+       position: absolute;
+    top: 1100px;
+    left: 1350px;
+}
+
+#madness {
+       position: absolute;
+    top: 1530px;
+    left: 500px;
+}
+
+#ocean {
+       position: absolute;
+    top: 1530px;
+    left: 900px;
+}
+
+#bash {
+       position: absolute;
+    top: 1530px;
+    left: 1300px;
+}
